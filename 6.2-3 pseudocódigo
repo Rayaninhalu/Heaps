@@ -1,0 +1,14 @@
+MINIMIZA-HEAP(A, i)
+    menor ← i
+    esquerda ← 2 * i + 1
+    direita ← 2 * i + 2
+
+    SE esquerda < tamanho(A) E A[esquerda] < A[menor] ENTAO
+        menor ← esquerda
+
+    SE direita < tamanho(A) E A[direita] < A[menor] ENTAO
+        menor ← direita
+
+    SE menor ≠ i ENTAO
+        trocar A[i] ↔ A[menor]
+        MINIMIZA-HEAP(A, menor)
